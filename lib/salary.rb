@@ -21,3 +21,14 @@ def calculate_tax(salary)
   return tax
 end
 
+def formatWith2Decimals(num)
+  ("%.2f" % num)
+end
+
+def generate_monthly_payslip(name, annualSalary)
+  tax = calculate_tax(annualSalary)
+  puts("Monthly Payslip for: \"" + name + "\"")
+  puts("Gross Monthly Income: $" + formatWith2Decimals(annualSalary / 12.0))
+  puts("Monthly Income Tax: $" + formatWith2Decimals(tax / 12.0))
+  puts("Net Monthly Income: $" + formatWith2Decimals((annualSalary - tax) / 12.0))
+end
