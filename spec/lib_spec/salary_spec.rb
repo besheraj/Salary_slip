@@ -1,4 +1,4 @@
-require "salary"
+require "salary_calc"
 # testing out if the outcome of the function is correct
 describe "#generate_monthly_payslip" do
   it "return full salary details" do
