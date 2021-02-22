@@ -20,6 +20,12 @@ class V1::MonthlySlipController < ApplicationController
            }
   end
   
+  # view all posted salary slips without id
+  def index
+    slip = Slip.all
+  render json: {salary_computations:slip.as_json(except: [:id])}
+  end
+
   # return calculated details 
   def show
     monthly_slip(params)
